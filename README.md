@@ -68,7 +68,7 @@ Late Night flattens dynamics heavily by design.
 
 ## Requirements
 
-- GNOME Shell 48, 49 or 50
+- GNOME Shell 48 to 51
 - PipeWire with its `filter-chain` module and LADSPA support, both part of the
   base `pipewire` package on Fedora, Debian and Ubuntu
 - The **swh-plugins** LADSPA package, the only dependency that is not installed

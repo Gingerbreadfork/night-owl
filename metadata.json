@@ -2,7 +2,7 @@
   "uuid": "night-owl@gingerbreadfork.github.io",
   "name": "Night Owl",
   "description": "Night-mode loudness normalizer for your current audio output.\n\nTames sudden loud moments — explosions, gunshots, ad breaks — while lifting quiet dialogue, so you can watch films at night without waking the house. Audio is routed through a PipeWire filter chain (SC4 compressor into a lookahead limiter) that guarantees a hard output ceiling.\n\nToggle it from Quick Settings. Three presets: Gentle, Movie Night and Late Night. Requires the LADSPA swh-plugins package.",
-  "shell-version": ["48", "49", "50"],
+  "shell-version": ["48", "49", "50", "51"],
   "session-modes": ["user", "unlock-dialog"],
   "settings-schema": "org.gnome.shell.extensions.night-owl",
   "gettext-domain": "night-owl",
