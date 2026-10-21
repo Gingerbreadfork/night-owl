@@ -1,0 +1,11 @@
+# Build output
+*.shell-extension.zip
+schemas/gschemas.compiled
+locale/
+po/*.mo
+
+# Editors
+*~
+*.swp
+.vscode/
+.idea/

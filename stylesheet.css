@@ -1,0 +1,24 @@
+/* SPDX-License-Identifier: GPL-2.0-or-later */
+
+/* The tile inherits GNOME's own quick-toggle styling. Only the preset rows
+ * need anything, and only enough for a title and description hierarchy. */
+
+.night-owl-preset-title {
+    font-weight: bold;
+}
+
+.night-owl-preset-blurb {
+    font-size: 0.85em;
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 2px;
+    max-width: 20em;
+}
+
+/* For themes that render the menu light. */
+.light .night-owl-preset-blurb {
+    color: rgba(0, 0, 0, 0.55);
+}
+
+.night-owl-warning {
+    color: #f5c211;
+}

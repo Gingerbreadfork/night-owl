@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="night-owl">
+  <schema id="org.gnome.shell.extensions.night-owl"
+          path="/org/gnome/shell/extensions/night-owl/">
+
+    <key name="preset" type="s">
+      <default>'movie'</default>
+      <summary>Active preset</summary>
+      <description>Which built-in compression preset to use: gentle, movie or late.</description>
+    </key>
+
+    <key name="use-custom" type="b">
+      <default>false</default>
+      <summary>Use custom parameters</summary>
+      <description>Override the selected preset with the custom-* parameters.</description>
+    </key>
+
+    <key name="show-indicator" type="b">
+      <default>true</default>
+      <summary>Show a panel indicator while active</summary>
+      <description>Display a moon icon in the top bar whenever Night Owl is processing audio.</description>
+    </key>
+
+    <key name="follow-default-device" type="b">
+      <default>true</default>
+      <summary>Follow the selected output device</summary>
+      <description>Rebuild the filter chain automatically when the output device changes.</description>
+    </key>
+
+    <key name="restore-on-login" type="b">
+      <default>false</default>
+      <summary>Re-enable at login</summary>
+      <description>Turn Night Owl back on at login if it was active when the session ended.</description>
+    </key>
+
+    <key name="was-active" type="b">
+      <default>false</default>
+      <summary>Internal: last known active state</summary>
+      <description>Used with restore-on-login. Not intended to be set by hand.</description>
+    </key>
+
+    <key name="dialogue-boost" type="b">
+      <default>true</default>
+      <summary>Dialogue clarity lift</summary>
+      <description>Apply a gentle presence-band EQ lift to make speech easier to follow at low volume.</description>
+    </key>
+
+    <key name="dialogue-boost-gain" type="d">
+      <default>3.0</default>
+      <range min="0.0" max="9.0"/>
+      <summary>Dialogue lift amount (dB)</summary>
+    </key>
+
+    <key name="dialogue-boost-freq" type="d">
+      <default>2200.0</default>
+      <range min="800.0" max="5000.0"/>
+      <summary>Dialogue lift centre frequency (Hz)</summary>
+    </key>
+
+    <!-- Custom compressor parameters. Ranges mirror the SC4 and
+         fast-lookahead-limiter LADSPA plugins exactly. -->
+
+    <key name="custom-rms-peak" type="d">
+      <default>0.25</default>
+      <range min="0.0" max="1.0"/>
+      <summary>RMS / peak balance</summary>
+      <description>0 responds to average level, 1 responds to peaks.</description>
+    </key>
+
+    <key name="custom-attack" type="d">
+      <default>10.0</default>
+      <range min="1.5" max="400.0"/>
+      <summary>Attack time (ms)</summary>
+    </key>
+
+    <key name="custom-release" type="d">
+      <default>250.0</default>
+      <range min="2.0" max="800.0"/>
+      <summary>Release time (ms)</summary>
+    </key>
+
+    <key name="custom-threshold" type="d">
+      <default>-18.0</default>
+      <range min="-30.0" max="0.0"/>
+      <summary>Threshold (dBFS)</summary>
+    </key>
+
+    <key name="custom-ratio" type="d">
+      <default>4.0</default>
+      <range min="1.0" max="20.0"/>
+      <summary>Compression ratio</summary>
+    </key>
+
+    <key name="custom-knee" type="d">
+      <default>3.0</default>
+      <range min="1.0" max="10.0"/>
+      <summary>Knee radius (dB)</summary>
+    </key>
+
+    <key name="custom-makeup" type="d">
+      <default>10.0</default>
+      <range min="0.0" max="24.0"/>
+      <summary>Makeup gain (dB)</summary>
+    </key>
+
+    <key name="custom-ceiling" type="d">
+      <default>-1.5</default>
+      <range min="-20.0" max="0.0"/>
+      <summary>Output ceiling (dBFS)</summary>
+      <description>Hard limiter ceiling. No audio can exceed this level.</description>
+    </key>
+
+  </schema>
+</schemalist>

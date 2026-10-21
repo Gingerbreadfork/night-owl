@@ -1,0 +1,280 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the Night Owl package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Night Owl 1.0.0\n"
+"Report-Msgid-Bugs-To: https://github.com/Gingerbreadfork/night-owl/issues\n"
+"POT-Creation-Date: 2026-10-21 19:16+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:225 extension.js:350 lib/indicator.js:65 lib/indicator.js:75
+msgid "Night Owl"
+msgstr ""
+
+#: extension.js:252
+msgid "Night Owl needs one more package"
+msgstr ""
+
+#: extension.js:253
+#, javascript-format
+msgid ""
+"Install the LADSPA audio plugins, then toggle Night Owl again:\n"
+"\n"
+"%s"
+msgstr ""
+
+#: extension.js:340
+msgid "Custom"
+msgstr ""
+
+#: extension.js:363
+msgid "Open Settings"
+msgstr ""
+
+#: prefs.js:37
+msgid "General"
+msgstr ""
+
+#: prefs.js:48
+msgid "Listening Preset"
+msgstr ""
+
+#: prefs.js:49
+msgid ""
+"How hard to squash the difference between quiet dialogue and loud action."
+msgstr ""
+
+#: prefs.js:83
+#, javascript-format
+msgid "%d dB gap  ·  +%d dB speech"
+msgstr ""
+
+#: prefs.js:108
+msgid "Dialogue Clarity"
+msgstr ""
+
+#: prefs.js:109
+msgid ""
+"A narrow lift around the presence band, where consonants live. Helps speech "
+"cut through at low volume without making the whole mix bright."
+msgstr ""
+
+#: prefs.js:113
+msgid "Lift speech frequencies"
+msgstr ""
+
+#: prefs.js:120
+msgid "Lift amount"
+msgstr ""
+
+#: prefs.js:120
+msgid "decibels"
+msgstr ""
+
+#: prefs.js:126
+msgid "Centre frequency"
+msgstr ""
+
+#: prefs.js:126
+msgid "hertz"
+msgstr ""
+
+#: prefs.js:135
+msgid "Behaviour"
+msgstr ""
+
+#: prefs.js:138
+msgid "Follow the selected output device"
+msgstr ""
+
+#: prefs.js:139
+msgid ""
+"Move the filter automatically when you switch to headphones, HDMI or "
+"speakers."
+msgstr ""
+
+#: prefs.js:146
+msgid "Re-enable at login"
+msgstr ""
+
+#: prefs.js:147
+msgid "Start Night Owl automatically if it was on when you logged out."
+msgstr ""
+
+#: prefs.js:154
+msgid "Show top bar indicator"
+msgstr ""
+
+#: prefs.js:155
+msgid "Display a moon icon while audio is being processed."
+msgstr ""
+
+#: prefs.js:171
+msgid "Setup Needed"
+msgstr ""
+
+#: prefs.js:172
+msgid ""
+"Night Owl uses two LADSPA audio plugins that are not installed yet. They are "
+"in your distribution's normal repositories."
+msgstr ""
+
+#: prefs.js:177
+msgid "Run this in a terminal, then reopen this window."
+msgstr ""
+
+#: prefs.js:183
+msgid "Copy command"
+msgstr ""
+
+#: prefs.js:206
+msgid "Advanced"
+msgstr ""
+
+#: prefs.js:211
+msgid "Custom Compressor"
+msgstr ""
+
+#: prefs.js:212
+msgid ""
+"Drive the SC4 compressor and limiter directly. Changes apply live while "
+"Night Owl is running."
+msgstr ""
+
+#: prefs.js:216
+msgid "Use custom settings"
+msgstr ""
+
+#: prefs.js:217
+msgid "Overrides the preset chosen on the General page."
+msgstr ""
+
+#: prefs.js:225
+msgid "Compressor"
+msgstr ""
+
+#: prefs.js:229
+msgid "Threshold"
+msgstr ""
+
+#: prefs.js:229
+msgid "Level above which compression starts. Lower catches more of the mix."
+msgstr ""
+
+#: prefs.js:230
+msgid "Ratio"
+msgstr ""
+
+#: prefs.js:230
+msgid "How firmly material above the threshold is pulled down."
+msgstr ""
+
+#: prefs.js:231
+msgid "Makeup gain"
+msgstr ""
+
+#: prefs.js:231
+msgid ""
+"Lifts everything back up afterwards. This is what makes dialogue audible."
+msgstr ""
+
+#: prefs.js:232
+msgid "Attack"
+msgstr ""
+
+#: prefs.js:232
+msgid "Milliseconds. Faster catches gunshots; too fast dulls impact."
+msgstr ""
+
+#: prefs.js:233
+msgid "Release"
+msgstr ""
+
+#: prefs.js:233
+msgid ""
+"Milliseconds. Too fast pumps, too slow leaves audio ducked after a bang."
+msgstr ""
+
+#: prefs.js:234
+msgid "Knee radius"
+msgstr ""
+
+#: prefs.js:234
+msgid "Softens the transition into compression."
+msgstr ""
+
+#: prefs.js:235
+msgid "RMS / peak balance"
+msgstr ""
+
+#: prefs.js:235
+msgid "0 follows average loudness, 1 follows peaks."
+msgstr ""
+
+#: prefs.js:246
+msgid "Output Ceiling"
+msgstr ""
+
+#: prefs.js:247
+msgid ""
+"A hard limit applied last. Nothing reaches your speakers above this level, "
+"whatever the compressor does."
+msgstr ""
+
+#: prefs.js:250
+msgid "Ceiling"
+msgstr ""
+
+#: prefs.js:250
+msgid "decibels relative to full scale"
+msgstr ""
+
+#: prefs.js:258
+msgid "Reset custom settings"
+msgstr ""
+
+#: prefs.js:259
+msgid "Return every value above to the Movie Night preset."
+msgstr ""
+
+#: prefs.js:262
+msgid "Reset"
+msgstr ""
+
+#: lib/indicator.js:76
+msgid "Night-mode audio normalizer"
+msgstr ""
+
+#: lib/indicator.js:99
+msgid "Finish setup…"
+msgstr ""
+
+#: lib/indicator.js:104
+msgid "Night Owl Settings"
+msgstr ""
+
+#: lib/indicator.js:116
+msgid "Setup needed"
+msgstr ""
+
+#: lib/indicator.js:118
+msgid "Starting…"
+msgstr ""
+
+#: lib/indicator.js:120
+msgid "Stopping…"
+msgstr ""
+
+#: lib/indicator.js:122
+msgid "Unavailable"
+msgstr ""
