@@ -5,10 +5,24 @@ late-night films watchable at low volume: quiet dialogue comes up, sudden loud
 moments come down, and a hard limiter guarantees that nothing above a ceiling
 you choose ever reaches your speakers.
 
+## Contents
+
+- [Features](#features)
+- [How it works](#how-it-works)
+- [Presets](#presets)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Usage](#usage)
+- [What it does to your audio setup](#what-it-does-to-your-audio-setup)
+- [Troubleshooting](#troubleshooting)
+- [Limitations](#limitations)
+- [Development](#development)
+- [Licence](#licence)
+
 ## Features
 
 - **One toggle, three presets.** Gentle, Movie Night and Late Night, chosen
-  from the tile's menu. Each row says in plain words what it does.
+  from the tile's menu. [Compare them](#presets) before you pick.
 - **A hard ceiling.** A lookahead limiter sits last in the chain. Transients
   cannot cross it, whatever the compressor does.
 - **Dialogue clarity.** An optional narrow lift around 2.2 kHz helps speech cut
@@ -47,6 +61,17 @@ apps ──► pre-gain ──► SC4 compressor ──► presence EQ ──►
   want it most. The pair cancels exactly, so output still tracks your volume
   slider while the compressor always sees a full-scale signal.
 
+## Presets
+
+Each preset is a full set of compressor and limiter parameters, shipped in
+`lib/presets.js` and editable from the Advanced page:
+
+| Preset | Character | Dialogue lift | Loud-to-quiet gap | Ceiling |
+|---|---|---|---|---|
+| **Gentle** | Light touch; keeps most of the dynamics. Barely noticeable on music. | +4.9 dB | 11.3 dB | −1.0 dBFS |
+| **Movie Night** | The everyday choice. Explosions still land, just softer. | +9.9 dB | 6.2 dB | −1.5 dBFS |
+| **Late Night** | Everything sits at about one level, for very quiet listening or thin walls. | +12.6 dB | 3.8 dB | −2.0 dBFS |
+
 ### Measured results
 
 A calibrated test scene, dialogue at −27 dBFS RMS and an explosion at −12 dBFS
@@ -62,9 +87,6 @@ RMS, 15 dB apart, rendered through each preset's exact settings:
 Peak output lands exactly on each preset's ceiling. Measured again through the
 live PipeWire chain, Movie Night held the same compression at 100%, 71% and 50%
 sink volume; without the gain staging, compression was gone below 100%.
-
-Movie Night is the default because action still has weight at 6 dB of range.
-Late Night flattens dynamics heavily by design.
 
 ## Requirements
 
@@ -141,10 +163,17 @@ dconf reset -f /org/gnome/shell/extensions/night-owl/
 Open Quick Settings and click **Night Owl**. While running, the subtitle shows
 the active preset. While idle, it shows the output device it will apply to.
 
-The arrow opens a menu with the three presets and **Night Owl Settings**, where
-you can adjust the dialogue lift, choose whether to follow device changes,
-re-enable at login, show a top bar indicator, and drive the compressor directly
-from the Advanced page. Changes apply live.
+The arrow opens a menu with the three presets and **Night Owl Settings**.
+
+Settings has two pages, and changes apply live while the chain runs:
+
+- **General** — pick the preset (each row shows its measured gap and speech
+  lift), tune the dialogue lift (amount 0–9 dB, centre 800–5000 Hz, default
+  2.2 kHz), and choose whether to follow output-device changes, re-enable at
+  login, and show a top bar indicator.
+- **Advanced** — drive the SC4 compressor and the limiter ceiling directly.
+  Custom values override the chosen preset; one button resets them all to
+  Movie Night.
 
 A virtual **Night Owl** device appears in Settings → Sound while active. That is
 the filter sink. Selecting a real device there moves the filter onto it.
